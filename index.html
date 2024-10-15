@@ -73,6 +73,8 @@
           </form>
         </div>
       </div>
+      <button id="darkModeToggle" class="btn btn-outline-light">Dark Mode</button>
+
     </nav>
     <div class="container mt-4">
       <div id="movieCards" class="row">
@@ -162,3 +164,60 @@
 
   </body>
 </html>
+
+<style>
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+
+  .btn:hover {
+    background-color: #f84464; /* Change background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card {
+    animation: fadeInUp 0.5s ease;
+  }
+
+
+  .dark-mode {
+    background-color: #1c1c1c;
+    color: white;
+  }
+
+  .dark-mode .navbar {
+    background-color: #000 !important;
+  }
+
+  .dark-mode .card {
+    background-color: #333;
+    color: white;
+  }
+
+  .dark-mode footer {
+    background-color: #222;
+    color: white;
+  }
+
+</style>
