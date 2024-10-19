@@ -11,7 +11,7 @@ window.onload = async () => {
 async function fetchMovieDetails(movieId) {
   try {
     const response = await fetch(
-      `http://localhost:7000/movie/${movieId}`
+      `https://booking-app-db.onrender.com/movie/${movieId}`
     );
     const movie = await response.json();
 
@@ -119,7 +119,7 @@ document.getElementById("submitBooking").addEventListener("click", async () => {
 
   try {
     const response = await fetch(
-      "http://localhost:7000/movie/book-movie",
+      "https://booking-app-db.onrender.com/movie/book-movie",
       {
         method: "POST",
         headers: {
