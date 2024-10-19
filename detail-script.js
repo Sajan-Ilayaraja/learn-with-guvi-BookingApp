@@ -11,7 +11,7 @@ window.onload = async () => {
 async function fetchMovieDetails(movieId) {
   try {
     const response = await fetch(
-      `https://booking-app-db.onrender.com/movie/${movieId}`
+      `http://localhost:7000/movie/${movieId}`
     );
     const movie = await response.json();
 
@@ -162,4 +162,3 @@ function bookTickets(movieId, showId, date) {
   );
   bookingModal.show();
 }
-
