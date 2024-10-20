@@ -119,7 +119,7 @@ document.getElementById("submitBooking").addEventListener("click", async () => {
 
   try {
     const response = await fetch(
-      "https://booking-app-db.onrender.com/movie/book-movie",
+      "http://localhost:7000/movie/book-movie",
       {
         method: "POST",
         headers: {
